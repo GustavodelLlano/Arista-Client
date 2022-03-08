@@ -1,0 +1,12 @@
+.placeImg{
+    height: 280px;
+    object-fit:cover;
+}
+.text-white{
+    text-decoration: none;
+    color: white;
+}
+
+.place-card{
+    margin-top: 20px;
+}
