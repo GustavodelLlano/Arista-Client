@@ -1,3 +1,4 @@
+import "./UsersList.css"
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import IconButton from '@mui/material/IconButton';
 import { useContext } from "react"
@@ -54,11 +55,12 @@ const UsersList = ({ usersInfo }) => {
                         return (
 
                             <Col md="4">
-                                <Card sx={{ maxWidth: 345 }}>
+                                <Card sx={{ maxWidth: 345, height: 450}}>
 
                                     <CardHeader
                                         title={elm.username} />
                                     <CardMedia
+                                        className='friendPhoto'
                                         component="img"
                                         height="194"
                                         image={elm.profilePic}

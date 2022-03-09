@@ -1,3 +1,4 @@
+import { MDBIcon } from 'mdb-react-ui-kit'
 import { useContext } from 'react'
 import { Navbar, Container, Nav, Image } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
@@ -13,12 +14,14 @@ const Navigation = () => {
     return (
 
 
-        <Navbar  variant='ligth' expand="lg" className="navbarCustom">
+        <Navbar  variant='ligth' expand="lg" className="navbarCustom fixed-top">
             <Container>
                 <NavLink to="/">
                     <Image className='logo' src="https://res.cloudinary.com/dvr0zsxuu/image/upload/v1646828862/gkpgfenbk6cdmuxxvk6t.png"></Image>
                 </NavLink>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav" >
+                <MDBIcon far icon="caret-square-down fa-lg " /> 
+                </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <NavLink to="/">

@@ -37,6 +37,7 @@ const MetersGraphic = ({ data }) => (
             legendPosition: 'middle'
         }}
         pointSize={10}
+        colors={{ scheme: 'pink_yellowGreen' }}
         pointColor={{ theme: 'background' }}
         pointBorderWidth={2}
         pointBorderColor={{ from: 'serieColor' }}

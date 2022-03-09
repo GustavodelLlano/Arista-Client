@@ -355,14 +355,10 @@ const PerformancePage = () => {
         setShowFriend(!showFriend)
     }
 
-    
-
-
-
     return (
 
-        <Container>
-            <h1>Hola {userProfile && userProfile.username}</h1>
+        <Container className="page">
+            <h1>Performance de {userProfile && userProfile.username} </h1>
             {!showFriend ? <Button onClick={toggleShowFriend}>Mostrar amigo</Button>
                 : <Button onClick={toggleShowFriend}>Ocultar amigo</Button>
             }
