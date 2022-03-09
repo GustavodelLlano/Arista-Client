@@ -1,10 +1,11 @@
 import React from 'react';
-import { MDBFooter } from 'mdb-react-ui-kit';
+import { MDBFooter, MDBIcon } from 'mdb-react-ui-kit';
+import "./Footer.css"
 
  const Footer = ( ) => {
   return (
-    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
-      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
+    <MDBFooter  className='text-center text-lg-start text-muted social'>
+      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom redes'>
         <div className='me-5 d-none d-lg-block'>
           <span>Síguenos en redes sociales:</span>
         </div>
@@ -32,12 +33,12 @@ import { MDBFooter } from 'mdb-react-ui-kit';
 
       </section>
 
-      <section className=''>
+      <section className='info'>
         <div className='container text-center text-md-start mt-5'>
           <div className='row mt-3'>
             <div className='col-md-3 col-lg-4 col-xl-3 mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
-                <i className='fas fa-gem me-3'></i>Arista
+              <MDBIcon fas icon="mountain me-3" />Arista
               </h6>
               <p>
                 Somos una aplicación de seguimiento deportivo en la escalada y red social.
@@ -105,14 +106,14 @@ import { MDBFooter } from 'mdb-react-ui-kit';
                 <i className='fas fa-phone me-3'></i> + 34 695 25 11 XX
               </p>
               <p>
-                <i className='fas fa-print me-3'></i> + 34 685 14 23 XX
+              <MDBIcon fas icon="mobile-alt me-3" /> + 34 685 14 23 XX
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+      <div className='text-center p-4 created' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         © 2022 Created by: 
         <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
            Jud y Gus

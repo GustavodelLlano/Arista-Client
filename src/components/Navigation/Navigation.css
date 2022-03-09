@@ -1,4 +1,7 @@
-
+.navbarCustom{
+  background-color: #fff8f8 ;
+  position: 
+}
 
 .navbarCustom span {
   color:black;
@@ -10,4 +13,10 @@ body a {
 
 .navbarCustom{
   margin-bottom: 20px;
+}
+
+.logo{
+  width: 100px;
+
+  margin: -2px 0px
 }
