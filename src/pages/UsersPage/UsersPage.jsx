@@ -32,10 +32,11 @@ const UsersPage = () => {
     return (
         <>
             <Container>
-                {usersInfo && <UsersList usersInfo={usersInfo} />}
                 <UserSearchBar handleUserSearchBar={loadUsersInformation} />
+                {usersInfo && <UsersList usersInfo={usersInfo} />}
             </Container>
         </>
+
     )
 }
 
