@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import "./UserSearchBar.css"
 
 
 function UserSearchBar({ handleUserSearchBar }) {
@@ -9,7 +10,7 @@ function UserSearchBar({ handleUserSearchBar }) {
     }
     return (
         <>
-            < input type="text" onChange={handleInputSearch} />
+            < input type="text" className="userBar" onChange={handleInputSearch} />
         </>
     );
 }

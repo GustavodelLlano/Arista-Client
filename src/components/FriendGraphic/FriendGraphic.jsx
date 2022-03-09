@@ -8,7 +8,7 @@ import PitchesGraphic from "../PitchesGraphic/PitchesGraphic"
 import PointsGraphic from "../PointsGraphic/PointsGraphic"
 
 const FriendGraphic = ({ friends }) => {
-    
+
     const [friendId, setFriendId] = useState()
 
     const handleInputChange = e => {
@@ -16,10 +16,13 @@ const FriendGraphic = ({ friends }) => {
         setFriendId(value)
     }
 
-    const[friendProfile, setFriendProfile] = useState({})
+    const [friendProfile, setFriendProfile] = useState({})
 
     useEffect(() => {
+
+
         friendId && loadFriendProfileInformation()
+
     }, [friendId])
 
     const loadFriendProfileInformation = () => {
@@ -34,10 +37,10 @@ const FriendGraphic = ({ friends }) => {
     console.log(friendProfile)
 
     useEffect(() => {
-         friendProfile && getPitchByM()
-         friendProfile && getPitchByDiff()
-         friendProfile && getPointsByMonth()
-         friendProfile && getMetersByMonth()
+        friendProfile && getPitchByM()
+        friendProfile && getPitchByDiff()
+        friendProfile && getPointsByMonth()
+        friendProfile && getMetersByMonth()
     }, [friendId, friendProfile])
 
     const [data, setData] = useState([])
@@ -123,6 +126,7 @@ const FriendGraphic = ({ friends }) => {
             ])
 
         })
+        console.log(months.Ene)
     }
 
     const [diffData, setDiffData] = useState([])
@@ -346,9 +350,9 @@ const FriendGraphic = ({ friends }) => {
         })
 
     }
-   
 
-  
+
+
 
     return (
         <>
@@ -362,27 +366,27 @@ const FriendGraphic = ({ friends }) => {
             </Form.Select>
 
             <Row>
-                            <Col lg="12" >
-                                <div className="PitchesGraphic">
-                                    {data.length !== 0 && <PitchesGraphic data={data} />}
-                                </div>
-                            </Col>
-                             <Col lg="12">
-                                <div className="PitchesGraphic">
-                                    {data.length !== 0 && <DiffGraphic data={diffData} />}
-                                </div>
-                            </Col>
-                           <Col lg="12">
-                                <div className="smallGraphic">
-                                    {data.length !== 0 && <PointsGraphic data={pointsData} />}
-                                </div>
-                            </Col>
-                            <Col lg="12">
-                                <div className="smallGraphic">
-                                    {metersData.length !== 0 && <MetersGraphic data={metersData} />}
-                                </div>
-                            </Col> 
-                        </Row> 
+                <Col lg="12" >
+                    <div className="PitchesGraphic">
+                        {data.length !== 0 && <PitchesGraphic data={data} />}
+                    </div>
+                </Col>
+                <Col lg="12">
+                    <div className="PitchesGraphic">
+                        {data.length !== 0 && <DiffGraphic data={diffData} />}
+                    </div>
+                </Col>
+                <Col lg="12">
+                    <div className="smallGraphic">
+                        {data.length !== 0 && <PointsGraphic data={pointsData} />}
+                    </div>
+                </Col>
+                <Col lg="12">
+                    <div className="smallGraphic">
+                        {metersData.length !== 0 && <MetersGraphic data={metersData} />}
+                    </div>
+                </Col>
+            </Row>
         </>
     )
 }
