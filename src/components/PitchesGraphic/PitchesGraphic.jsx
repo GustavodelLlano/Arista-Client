@@ -14,7 +14,7 @@ const PitchesGraphic = ({ data }) => (
         padding={0.3}
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: true }}
-        colors={{ scheme: 'pink_yellowGreen' }}
+        colors={{ scheme: 'red_yellow_blue' }}
         defs={[
             {
                 id: 'dots',
@@ -36,13 +36,13 @@ const PitchesGraphic = ({ data }) => (
             }
         ]}
 
-      
-      
+
+
         borderColor={{
             from: '#61cdbb',
             modifiers: [
                 [
-                    
+
                     'darker',
                     1.6
                 ]
@@ -108,7 +108,7 @@ const PitchesGraphic = ({ data }) => (
         ]}
         role="application"
         ariaLabel="Nivo bar chart demo"
-        barAriaLabel={function(e){return e.id+": "+e.formattedValue+" in months: "+e.indexValue}}
+        barAriaLabel={function (e) { return e.id + ": " + e.formattedValue + " in months: " + e.indexValue }}
     />
 )
 

@@ -54,45 +54,45 @@ const ListItem = ({ placeDetails, refreshPitches, closeModal }) => {
     return (
         placeDetails ?
             <>
-                <h1>Todas las vias de:{placeDetails.name}</h1>
+                <h1>Todas las vias de: {placeDetails.name}</h1>
 
                 <ListGroup as="ol" numbered>
 
                     {placeDetails.pitch?.map(elm => {
 
                         return (
-                           
-                                <ListGroup.Item
-                                    as="li"
-                                    className="d-flex justify-content-between align-items-start"
-                                    key={elm._id}
-                                >
-                                    <div className="ms-2 me-auto">
-                                        <div className="fw-bold">{elm.name}</div>
-                                        <p>Metros: {elm.meters} | Cintas: {elm.quickdraws} | Sector: {elm.sector}</p>
-                                    </div>
-                                    {isEquip && <Button onClick={() => handleModalOpen(elm)} variant="warning" >Editar vía</Button>}
-                                    {isAdmin && <Button onClick={() => handleModalOpen(elm)} variant="warning" >Editar vía</Button>}
-                                    {isEquip && <Button onClick={() => deletePitch(elm._id)} variant="danger" >Eliminar vía</Button>}
-                                    {isAdmin && <Button onClick={() => deletePitch(elm._id)} variant="danger" >Eliminar vía</Button>}
-                                    {/* {isLoggedIn && <Button onClick={() => addDonePitch(elm._id)} variant="warning" >Vía encadenada</Button>} */}
 
-                                    {isLoggedIn && <IconButton aria-label="favorite" size="large" onClick={() => addDonePitch(elm._id)}>
-                                        <CheckCircleIcon fontSize="inherit" />
-                                    </IconButton>} 
+                            <ListGroup.Item
+                                as="li"
+                                className="d-flex justify-content-between align-items-start"
+                                key={elm._id}
+                            >
+                                <div className="ms-2 me-auto">
+                                    <div className="fw-bold">{elm.name}</div>
+                                    <p>Metros: {elm.meters} | Cintas: {elm.quickdraws} | Sector: {elm.sector}</p>
+                                </div>
+                                {isEquip && <Button onClick={() => handleModalOpen(elm)} variant="warning" >Editar vía</Button>}
+                                {isAdmin && <Button onClick={() => handleModalOpen(elm)} variant="warning" >Editar vía</Button>}
+                                {isEquip && <Button onClick={() => deletePitch(elm._id)} variant="danger" >Eliminar vía</Button>}
+                                {isAdmin && <Button onClick={() => deletePitch(elm._id)} variant="danger" >Eliminar vía</Button>}
+                                {/* {isLoggedIn && <Button onClick={() => addDonePitch(elm._id)} variant="warning" >Vía encadenada</Button>} */}
 
-                                    {/* {isLoggedIn && <Button onClick={() => addWishPitch(elm._id)} variant="warning" >Añadir a vía a proyectos</Button>} */}
-                                    {isLoggedIn && <IconButton aria-label="favorite" size="large" onClick={() => addWishPitch(elm._id)}>
-                                        <FavoriteIcon fontSize="inherit" />
-                                    </IconButton>}
+                                {isLoggedIn && <IconButton aria-label="favorite" size="large" onClick={() => addDonePitch(elm._id)}>
+                                    <CheckCircleIcon fontSize="inherit" />
+                                </IconButton>}
 
-                                    <Badge variant="primary" pill>
-                                        {elm.diff}
-                                    </Badge>
-                                </ListGroup.Item>
+                                {/* {isLoggedIn && <Button onClick={() => addWishPitch(elm._id)} variant="warning" >Añadir a vía a proyectos</Button>} */}
+                                {isLoggedIn && <IconButton aria-label="favorite" size="large" onClick={() => addWishPitch(elm._id)}>
+                                    <FavoriteIcon fontSize="inherit" />
+                                </IconButton>}
+
+                                <Badge variant="primary" pill>
+                                    {elm.diff}
+                                </Badge>
+                            </ListGroup.Item>
 
 
-                         
+
                         )
 
                     })}

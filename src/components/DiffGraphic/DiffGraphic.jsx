@@ -4,7 +4,7 @@ import { ResponsiveRadar } from '@nivo/radar'
 const DiffGraphic = ({ data }) => (
     <ResponsiveRadar
         data={data}
-        keys={[ 'vias' ]}
+        keys={['vias']}
         indexBy="diff"
         valueFormat=">-.2f"
         margin={{ top: 70, right: 80, bottom: 40, left: 80 }}
@@ -13,7 +13,9 @@ const DiffGraphic = ({ data }) => (
         dotSize={10}
         dotColor={{ theme: 'background' }}
         dotBorderWidth={2}
-        colors={{ scheme: 'pink_yellowGreen' }}
+        colors={{
+            scheme: 'red_yellow_blue'
+        }}
         blendMode="multiply"
         motionConfig="wobbly"
         legends={[
