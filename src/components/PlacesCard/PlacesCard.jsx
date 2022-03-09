@@ -1,4 +1,5 @@
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import "./PlacesCard.css"
 import IconButton from '@mui/material/IconButton';
 import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
@@ -57,25 +58,16 @@ const PlacesCard = ({ places, refreshPlaces }) => {
                             </Card.ImgOverlay>
 
                         </Card>
-                        {isEquip && <Button variant="warning" onClick={() => handleEditModalOpen(place)} >Editar  escuela</Button>}
-                        {isAdmin && <Button variant="warning" onClick={() => handleEditModalOpen(place)} >Editar  escuela</Button>}
+                        {isEquip && <Button variant="warning" className='roleButton' onClick={() => handleEditModalOpen(place)} >Editar  escuela</Button>}
+                        {isAdmin && <Button variant="warning" className='roleButton' onClick={() => handleEditModalOpen(place)} >Editar  escuela</Button>}
 
-                        {isEquip && <Button variant="danger" onClick={() => deletePlace(place._id)} >Eliminar  escuela</Button>}
-                        {isAdmin && <Button variant="danger" onClick={() => deletePlace(place._id)} >Eliminar  escuela</Button>}
-
-                        {/* {isEquip && <IconButton aria-label="delete" size="large" onClick={() => deletePlace(place._id)}>
-                            <DeleteIcon fontSize="inherit" />
-                        </IconButton>}
-
-                        {isAdmin && <IconButton aria-label="delete" size="large" onClick={() => deletePlace(place._id)}>
-                            <DeleteIcon fontSize="inherit" />
-                        </IconButton>} */}
+                        {isEquip && <Button variant="danger" className='roleButton' onClick={() => deletePlace(place._id)} >Eliminar  escuela</Button>}
+                        {isAdmin && <Button variant="danger" className='roleButton' onClick={() => deletePlace(place._id)} >Eliminar  escuela</Button>}
 
                         {isLoggedIn && <IconButton aria-label="favorite" size="large" onClick={() => addFavPlace(place._id)}>
                             <FavoriteIcon fontSize="inherit" />
                         </IconButton>}
 
-                        {/* {isLoggedIn && <Button variant="warning" onClick={() => addFavPlace(place._id)} >Añadir escuela a favoritos</Button>} */}
                     </div>
 
                 )

@@ -1,3 +1,4 @@
+import "./Map.css"
 import React, { useState } from "react";
 import Map from "./BoldMap/BoldMap";
 import Marker from "./Marker/Marker";
@@ -10,7 +11,7 @@ export default function GMap({ placeDetails }) {
     const [bound, setBound] = useState({});
     console.log(placeDetails)
     return (
-        <div>
+        <div className="mapMargin">
             { placeDetails &&
             <Map
                 zoom={10}

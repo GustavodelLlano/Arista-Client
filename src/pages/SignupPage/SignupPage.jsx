@@ -6,7 +6,7 @@ import SignUpForm from "../../components/SignUpForm/SignUpForm"
 const SignupPage = () => {
 
     return (
-        <Container>
+        <Container className="page">
             <Row className="justify-content-md-center">
                 <Col md={4}>
                     <h1>Regístrate</h1>

@@ -32,7 +32,7 @@ const PlacesPage = () => {
 
 
     return (
-        <Container>
+        <Container className="page">
             <h1>Todos los sectores de escalada</h1>
 
             {isEquip  && <Button variant="outline-success" onClick={handleModalOpen} >Crear nueva escuela</Button>}

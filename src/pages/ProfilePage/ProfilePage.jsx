@@ -43,8 +43,8 @@ const ProfilePage = () => {
     const handleModalOpen = () => setShowModal(true)
 
     return (
-        <>
-            <Container>
+        
+            <Container className="page">
                 <Row>
                     <Col md="4">
 
@@ -78,7 +78,7 @@ const ProfilePage = () => {
                 </Modal>
 
             </Container>
-        </>
+       
     )
 }
 

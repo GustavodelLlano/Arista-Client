@@ -11,7 +11,7 @@ const PointsGraphic = ({ data }) => (
         padding={0.3}
         valueScale={{ type: 'linear' }}
         indexScale={{ type: 'band', round: true }}
-        colors={{ scheme: 'red_yellow_blue' }}
+        colors={{ scheme: 'dark2' }}
         defs={[
             {
                 id: 'dots',

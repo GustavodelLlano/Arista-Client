@@ -7,7 +7,8 @@ import { useContext } from "react"
 import userService from "../../services/user.service"
 import pitchesService from "../../services/pitches.service"
 import { useState } from "react"
-import EditPitchForm from "../EditPitchForm/EditPitchForm"
+import EditPitchForm from "../EditPitchForm/EditPitchForm" 
+import "./ListItem.css"
 
 const ListItem = ({ placeDetails, refreshPitches, closeModal }) => {
     const [isWished, setIsWished] = useState(false)

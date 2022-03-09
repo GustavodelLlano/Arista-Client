@@ -1,6 +1,10 @@
 .navbarCustom{
   background-color: #fff8f8 ;
-  position: 
+  margin-bottom: 100px;
+}
+
+.navbar-toggler-icon{
+  background-color: black !important;
 }
 
 .navbarCustom span {

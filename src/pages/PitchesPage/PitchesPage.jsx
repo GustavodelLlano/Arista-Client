@@ -33,7 +33,7 @@ const PitchesPage = () => {
 
     return (
 
-        <Container>
+        <Container className="page">
 
             {isEquip  && <Button variant="outline-success" onClick={handleModalOpen} >Crear nueva vía</Button>}
             {isAdmin  && <Button variant="outline-success" onClick={handleModalOpen} >Crear nueva vía</Button>}
