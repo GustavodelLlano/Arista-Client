@@ -46,7 +46,7 @@ const UsersList = ({ usersInfo }) => {
         usersInfo ?
 
             <>
-                <h1> Encuentra a tus amigos!!</h1>
+
 
                 <Row xs={1} md={2} className="g-4">
                     {usersInfo?.map(elm => {

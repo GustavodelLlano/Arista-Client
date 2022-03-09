@@ -6,9 +6,14 @@ import { AuthContext } from "../../context/auth.context"
 import FriendsList from "../../components/FriendsList/FriendsList"
 import WishPitchesList from "../../components/WishPitchesList/WishPitchesList"
 import EditProfileForm from "../../components/EditProfileForm/EditProfileForm"
-import { Button, Col, Container, Modal, Row } from "react-bootstrap"
+import { Button, Col, Container, Modal, Row, Card } from "react-bootstrap"
 import WishPlacesCard from "../../components/WishPlacesCard/WishPlacesCard"
 import UsersList from "../../components/UsersList/UsersList"
+import EditIcon from '@mui/icons-material/Edit';
+import { IconButton } from "@mui/material"
+import "./ProfilePage.css"
+
+
 
 const ProfilePage = () => {
 
@@ -41,11 +46,13 @@ const ProfilePage = () => {
         <>
             <Container>
                 <Row>
-
                     <Col md="4">
-                        <h1>Tu perfil</h1>
+
                         <ProfileCard userProfile={userProfile} />
-                        {isLoggedIn && <Button variant="outline-success" onClick={handleModalOpen} >Edita tu perfil!</Button>}
+                        {isLoggedIn && <IconButton className="editButton" aria-label="edit" size="large" onClick={handleModalOpen}>
+                            <EditIcon fontSize="inherit" />
+                        </IconButton>}
+
                     </Col>
                     <Col md="8">
                         {userProfile.wishPitches && userProfile.wishPitches.length !== 0 && <WishPitchesList userProfile={userProfile} refreshFavPitches={loadProfileInformation} />}

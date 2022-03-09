@@ -1,5 +1,8 @@
+
 import { useState } from 'react'
+import { FormControl, InputGroup, Placeholder } from 'react-bootstrap';
 import "./UserSearchBar.css"
+
 
 
 function UserSearchBar({ handleUserSearchBar }) {
@@ -9,9 +12,12 @@ function UserSearchBar({ handleUserSearchBar }) {
         handleUserSearchBar(e.target.value)
     }
     return (
-        <>
-            < input type="text" className="userBar" onChange={handleInputSearch} />
-        </>
+        <div className="userSearch">
+
+            < input type="text" placeholder="Busca a tus amigos" className="userBar" onChange={handleInputSearch} />
+
+
+        </div>
     );
 }
 

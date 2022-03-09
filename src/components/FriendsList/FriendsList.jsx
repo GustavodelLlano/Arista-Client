@@ -1,10 +1,12 @@
 import DeleteIcon from '@mui/icons-material/Delete'
 import IconButton from '@mui/material/IconButton'
 import { useContext } from "react"
-import { Button, Card } from "react-bootstrap"
+import { Button, Card, Col, Row } from "react-bootstrap"
 import { AuthContext } from "../../context/auth.context"
 import userService from "../../services/user.service"
 import { useNavigate } from "react-router-dom"
+import { CardActions, CardContent, CardHeader, CardMedia, Typography } from '@mui/material'
+
 
 
 const FriendsList = ({ userProfile, refreshProfileInformation }) => {
@@ -27,44 +29,56 @@ const FriendsList = ({ userProfile, refreshProfileInformation }) => {
 
         userProfile ?
             <>
+                <Row xs={1} md={2} className="g-4">
+                    {userProfile.friends?.map(elm => {
 
-                <h1> Aquí están tus amigos {userProfile.username}!</h1>
+                        return (
+                            <Col md="4">
+                                <Card sx={{ maxWidth: 345 }}>
 
-                {userProfile.friends?.map(elm => {
+                                    <CardHeader
+                                        title={elm.username} />
+                                    <CardMedia
+                                        component="img"
+                                        height="194"
+                                        image={elm.profilePic}
+                                        alt="User photo"
+                                    />
 
-                    return (
-                        <div>
-                            {isLoggedIn && <IconButton aria-label="delete" size="large" onClick={() => removeFriend(elm._id)}>
-                                <DeleteIcon fontSize="inherit" />
-                            </IconButton>}
+                                    <CardContent>
+                                        <Typography variant="body2" color="text.secondary">
+                                            {elm.description}
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions disableSpacing />
+                                    {isLoggedIn && <IconButton aria-label="delete" size="large" onClick={() => removeFriend(elm._id)}>
+                                        <DeleteIcon fontSize="inherit" />
+                                    </IconButton>}
+
+                                </Card>
+
+                            </Col>
 
 
-                            <Card style={{ width: '18rem' }} key={elm._id}>
-                                <Card.Img variant="top" src={elm.profilePic} />
-                                <Card.Body>
-                                    <Card.Title>Username</Card.Title>
-                                    <Card.Text>
-                                        {elm.username}
-                                    </Card.Text>
-                                    <Card.Title>Descripción</Card.Title>
-                                    <Card.Text>
-                                        {elm.description}
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
 
-
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </Row>
 
             </>
+
+
+
             :
+
+
             <>Loading...</>
     )
 
-
-
 }
+
+// { isLoggedIn && <IconButton aria-label="delete" size="large" onClick={() => removeFriend(elm._id)}>
+//     <DeleteIcon fontSize="inherit" />
+// </IconButton>}
 
 export default FriendsList

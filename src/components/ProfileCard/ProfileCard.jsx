@@ -2,7 +2,7 @@ import { Card } from "react-bootstrap"
 import "./ProfileCard.css"
 
 const ProfileCard = ({ userProfile }) => {
-    
+
     return (
         <>
 
@@ -20,8 +20,6 @@ const ProfileCard = ({ userProfile }) => {
                 </Card.Body>
             </Card>
         </>
-
-
 
 
     )

@@ -1,13 +1,21 @@
-.userBar{
 
+.userBar{
+  
+  padding: 10px;
+  margin-bottom: 60px;
+  border: 2px solid black;
+  border-radius: 25px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 20px;
+  width: 400px;
+
+
+   
+}
+
+.userSearch{
     display: flex;
     justify-content: center;
-   width: 200px;
-   padding: 10px;
-   
-   border: 2px solid black;
-   border-radius: 25px;
-   margin-bottom: 20px;
-/* margin-left: 45% */
-   
+    align-items: center;
 }
