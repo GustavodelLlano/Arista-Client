@@ -6,6 +6,7 @@ import { AuthProviderWrapper } from './context/auth.context';
 import { MessageProviderWrapper } from './context/message.context';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+import './App.css';
 
 ReactDOM.render(
 

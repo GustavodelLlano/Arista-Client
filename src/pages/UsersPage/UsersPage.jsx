@@ -31,7 +31,7 @@ const UsersPage = () => {
     }
     return (
         <>
-            <Container>
+            <Container className="page">
                 <UserSearchBar handleUserSearchBar={loadUsersInformation} />
                 {usersInfo && <UsersList usersInfo={usersInfo} />}
             </Container>

@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-
-@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;600&display=swap');
+  font-family: 'Montserrat', sans-serif;
 
 } 
 
