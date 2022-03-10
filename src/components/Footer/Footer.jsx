@@ -1,4 +1,9 @@
 import React from 'react';
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
+import PhoneAndroidRoundedIcon from '@mui/icons-material/PhoneAndroidRounded';
+import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
+import LandscapeRoundedIcon from '@mui/icons-material/LandscapeRounded';
 import { MDBFooter, MDBIcon } from 'mdb-react-ui-kit';
 import "./Footer.css"
 
@@ -38,7 +43,7 @@ const Footer = () => {
           <div className='row mt-3'>
             <div className='col-md-3 col-lg-4 col-xl-3 mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
-                <MDBIcon fas icon="mountain me-3" />Arista
+                <LandscapeRoundedIcon/> Arista
               </h6>
               <p>
                 Somos una aplicación de seguimiento deportivo en la escalada y red social.
@@ -96,17 +101,16 @@ const Footer = () => {
             <div className='col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Contacto</h6>
               <p>
-                <i className='fas fa-home me-3'></i> Madrid, 28001, ES
+                <HomeRoundedIcon me-3/> Madrid, 28001, ES
               </p>
               <p>
-                <i className='fas fa-envelope me-3'></i>
-                info@arista.com
+                <EmailRoundedIcon/> info@arista.com
               </p>
               <p>
-                <i className='fas fa-phone me-3'></i> + 34 695 25 11 XX
+                <PhoneAndroidRoundedIcon/> + 34 695 25 11 XX
               </p>
               <p>
-                <MDBIcon fas icon="mobile-alt me-3" /> + 34 685 14 23 XX
+                <LocalPhoneRoundedIcon/> 91 514 23 XX
               </p>
             </div>
           </div>

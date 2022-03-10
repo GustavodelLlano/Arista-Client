@@ -1,4 +1,5 @@
-import { MDBIcon } from 'mdb-react-ui-kit'
+
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import { useContext } from 'react'
 import { Navbar, Container, Nav, Image } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
@@ -18,7 +19,7 @@ const Navigation = () => {
                     <Image className='logo' src="https://res.cloudinary.com/dvr0zsxuu/image/upload/v1646914361/rxebuxsjuwhzk3llqv9f.png"></Image>
                 </NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" >
-                <MDBIcon far icon="caret-square-down fa-lg " /> 
+                <MenuRoundedIcon />
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
