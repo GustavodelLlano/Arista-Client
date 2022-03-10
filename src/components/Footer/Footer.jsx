@@ -114,7 +114,7 @@ const Footer = () => {
       </section>
 
       <div className='text-center p-4 created' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2022 Created by:
+        © 2022 Created by: 
         <a className='text-reset fw-bold' href='https://mdbootstrap.com/'>
           Jud y Gus
         </a>

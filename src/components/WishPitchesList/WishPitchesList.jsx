@@ -5,17 +5,22 @@ import userService from "../../services/user.service"
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import DeleteIcon from '@mui/icons-material/Delete'
 import IconButton from '@mui/material/IconButton'
+import {MessageContext} from "../../context/message.context"
 
 
 
 const WishPitchesList = ({ userProfile, refreshFavPitches }) => {
 
     const { isLoggedIn } = useContext(AuthContext)
+    const { setShowMessage, setMessageInfo } = useContext(MessageContext)
 
     const addDonePitch = (pitch_id) => {
         userService
             .addDonePitches(pitch_id)
-            .then(() => refreshFavPitches())
+            .then(() => {
+                setShowMessage(true)
+                setMessageInfo({ title: 'Vía compleata', desc: 'Enhorabuena bicho!' })
+            })
             .catch(err => console.log(err))
     }
 

@@ -21,17 +21,19 @@ const UsersPage = () => {
 
 
     const loadUsersInformation = (words) => {
+       
 
         userService
             .getAllUsers({ words })
             .then(({ data }) => {
-                setUsersInfo(data)
+                const filteredData = data.filter(friends => friends._id !== user._id )
+                setUsersInfo(filteredData)
             })
             .catch(err => console.log(err))
     }
     return (
         <>
-            <Container>
+            <Container className="page">
                 <UserSearchBar handleUserSearchBar={loadUsersInformation} />
                 {usersInfo && <UsersList usersInfo={usersInfo} />}
             </Container>

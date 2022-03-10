@@ -18,7 +18,6 @@ class UserService {
     }
 
     getAllUsers = (words) => {
-        console.log(words);
         return this.api.post('/getAllUsers', words)
     }
 

@@ -108,7 +108,7 @@ const NewPitchForm = ({ closeModal, refreshPitches }) => {
 
 
             <div className="d-grid gap-2">
-                <Button variant="dark" type="submit" >Crear vía</Button>
+                <Button style={{backgroundColor: "#b13636"}} type="submit" >Crear vía</Button>
             </div>
 
         </Form >

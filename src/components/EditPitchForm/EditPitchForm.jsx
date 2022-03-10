@@ -89,7 +89,7 @@ const EditPitchForm = ({pitch}, refreshPitches, closeModal) =>{
 
 
         <div className="d-grid gap-2">
-            <Button variant="dark" type="submit" >Editar vía</Button>
+            <Button style={{backgroundColor: "#b13636"}} type="submit" >Editar vía</Button>
         </div>
 
     </Form >

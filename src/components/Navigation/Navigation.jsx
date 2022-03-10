@@ -10,14 +10,12 @@ const Navigation = () => {
 
     const { isLoggedIn, user, logOutUser } = useContext(AuthContext)
 
-
     return (
-
 
         <Navbar  variant='ligth' expand="lg" className="navbarCustom fixed-top">
             <Container>
                 <NavLink to="/">
-                    <Image className='logo' src="https://res.cloudinary.com/dvr0zsxuu/image/upload/v1646828862/gkpgfenbk6cdmuxxvk6t.png"></Image>
+                    <Image className='logo' src="https://res.cloudinary.com/dvr0zsxuu/image/upload/v1646914361/rxebuxsjuwhzk3llqv9f.png"></Image>
                 </NavLink>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" >
                 <MDBIcon far icon="caret-square-down fa-lg " /> 
@@ -25,34 +23,34 @@ const Navigation = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <NavLink to="/">
-                            <Nav.Link as="span">Inicio</Nav.Link>
+                            <Nav.Link className="link" as="span">Inicio</Nav.Link>
                         </NavLink>
                         <NavLink to="/escuelas">
-                            <Nav.Link as="span">Escuelas de escalada</Nav.Link>
+                            <Nav.Link className="link" as="span">Escuelas de escalada</Nav.Link>
                         </NavLink>
 
                         {
                             !isLoggedIn ?
                                 <>
                                     <NavLink to="/registro">
-                                        <Nav.Link as="span">Registrate</Nav.Link>
+                                        <Nav.Link className="link" as="span">Registrate</Nav.Link>
                                     </NavLink>
                                     <NavLink to="/inicio-sesion">
-                                        <Nav.Link as="span">Inicia sesión</Nav.Link>
+                                        <Nav.Link className="link" as="span">Inicia sesión</Nav.Link>
                                     </NavLink>
                                 </>
                                 :
                                 <>
                                     <NavLink to="/usuarios">
-                                        <Nav.Link as="span">Conecta con amigos</Nav.Link>
+                                        <Nav.Link className="link" as="span">Conecta con amigos</Nav.Link>
                                     </NavLink>
                                     <NavLink to="/rendimiento">
-                                        <Nav.Link as="span">Tu rendimiento deportivo</Nav.Link>
+                                        <Nav.Link className="link" as="span">Tu rendimiento deportivo</Nav.Link>
                                     </NavLink>
                                     <NavLink to="/perfil">
-                                        <Nav.Link as="span">Perfil: {user?.username}</Nav.Link>
+                                        <Nav.Link className="link" as="span">Perfil: {user?.username}</Nav.Link>
                                     </NavLink>
-                                    <Nav.Link as="span" onClick={logOutUser}>Cerrar sesión</Nav.Link>
+                                    <Nav.Link className="link" as="span" onClick={logOutUser}>Cerrar sesión</Nav.Link>
                                 </>
                         }
 

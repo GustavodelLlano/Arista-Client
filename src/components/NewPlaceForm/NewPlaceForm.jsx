@@ -92,7 +92,7 @@ const NewPlaceForm = ({ closeModal, refreshPlaces }) => {
         </Form.Group>
 
         <div className="d-grid gap-2">
-            <Button variant="dark" type="submit" disabled={loadingImage}>{loadingImage ? 'Espere...' : 'Crear escuela'}</Button>
+            <Button style={{backgroundColor: "#b13636"}} type="submit" disabled={loadingImage}>{loadingImage ? 'Espere...' : 'Crear escuela'}</Button>
         </div>
 
     </Form >

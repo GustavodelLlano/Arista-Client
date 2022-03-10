@@ -1,5 +1,5 @@
 .navbarCustom{
-  background-color: #fff8f8 ;
+  background-color: #fddddd ;
   margin-bottom: 100px;
 }
 
@@ -23,4 +23,8 @@ body a {
   width: 100px;
 
   margin: -2px 0px
+}
+
+.link:hover {
+  color: #b13636 !important;
 }

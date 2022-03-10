@@ -35,8 +35,8 @@ const PlacesPage = () => {
         <Container className="page">
             <h1>Todos los sectores de escalada</h1>
 
-            {isEquip  && <Button variant="outline-success" onClick={handleModalOpen} >Crear nueva escuela</Button>}
-            {isAdmin  && <Button variant="outline-success" onClick={handleModalOpen} >Crear nueva escuela</Button>}
+            {isEquip  && <Button style={{backgroundColor: "#b13636"}}  onClick={handleModalOpen} >Crear nueva escuela</Button>}
+            {isAdmin  && <Button style={{backgroundColor: "#b13636"}}  onClick={handleModalOpen} >Crear nueva escuela</Button>}
          
             <Modal show={showModal} onHide={handleModalClose} size="lg">
                 <Modal.Header closeButton>
