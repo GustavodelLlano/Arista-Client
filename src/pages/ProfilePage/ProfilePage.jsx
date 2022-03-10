@@ -60,6 +60,8 @@ const ProfilePage = () => {
 
                 </Row>
 
+                <h1>Amigos</h1>
+
                 {userProfile.friends && userProfile.friends.length !== 0 && <FriendsList userProfile={userProfile} refreshProfileInformation={loadProfileInformation} />}
 
                 {userProfile.favPlaces && userProfile.favPlaces.length !== 0 && <WishPlacesCard places={userProfile.favPlaces} refreshPlaces={loadProfileInformation} />}

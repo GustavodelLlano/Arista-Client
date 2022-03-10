@@ -359,8 +359,8 @@ const PerformancePage = () => {
 
         <Container className="page">
             <h1>Performance de {userProfile && userProfile.username} </h1>
-            {!showFriend ? <Button onClick={toggleShowFriend}>Mostrar amigo</Button>
-                : <Button onClick={toggleShowFriend}>Ocultar amigo</Button>
+            {!showFriend ? <Button style={{backgroundColor: "#b13636"}} onClick={toggleShowFriend}>Mostrar amigo</Button>
+                : <Button style={{backgroundColor: "#b13636"}} onClick={toggleShowFriend}>Ocultar amigo</Button>
             }
             
 

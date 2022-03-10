@@ -35,8 +35,8 @@ const PitchesPage = () => {
 
         <Container className="page">
 
-            {isEquip  && <Button variant="outline-success" onClick={handleModalOpen} >Crear nueva vía</Button>}
-            {isAdmin  && <Button variant="outline-success" onClick={handleModalOpen} >Crear nueva vía</Button>}
+            {isEquip  && <Button style={{backgroundColor: "#b13636", marginBottom:"20px"}} onClick={handleModalOpen} >Crear nueva vía</Button>}
+            {isAdmin  && <Button  style={{backgroundColor: "#b13636", marginBottom:"20px"}} onClick={handleModalOpen} >Crear nueva vía</Button>}
 
             <Modal show={showModal} onHide={handleModalClose} size="lg">
                 <Modal.Header closeButton>

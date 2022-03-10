@@ -1,9 +1,5 @@
+import "./SignUpForm.css"
 import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
-import IconButton from '@mui/material/IconButton';
-import PhotoCamera from '@mui/icons-material/PhotoCamera';
-import Stack from '@mui/material/Stack';
-import Input from '@mui/material/IconButton'
 import React from "react"
 import { useState, useContext } from "react"
 import authService from "../../services/auth.service"
@@ -91,10 +87,8 @@ const SignUpForm = () => {
                 <Form.Label>Introduzca foto si lo desea</Form.Label>
                 < Form.Control type="file" onChange={uploadProfileImage} />
             </Form.Group>
-            {/* <button color="unique" type="submit">
-                Registrate
-            </button> */}
-            <Button variant="contained" type="submit" style={{ width: '100%' }} disableElevation>
+
+            <Button variant="contained" type="submit" style={{ width: '100%', backgroundColor: "#b13636" }} classname="buttonColor" disableElevation>
                 Registrate
             </Button>
 

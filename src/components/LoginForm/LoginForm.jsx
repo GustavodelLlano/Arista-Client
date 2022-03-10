@@ -67,7 +67,7 @@ function LoginForm() {
 
             {/* <Button variant="dark" type="submit" style={{ width: '100%' }}>Iniciar sesión</Button> */}
             {/* <Button variant="outlined" type="submit">Inicia Sesión</Button> */}
-            <Button variant="contained" type="submit" style={{ width: '100%' }} disableElevation>
+            <Button variant="contained" type="submit" style={{ width: '100%', backgroundColor: "#b13636"}} disableElevation>
                 Inicia sesión
             </Button>
 

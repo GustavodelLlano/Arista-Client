@@ -33,14 +33,14 @@ const FriendsList = ({ userProfile, refreshProfileInformation }) => {
                     {userProfile.friends?.map(elm => {
 
                         return (
-                            <Col md="4">
-                                <Card sx={{ maxWidth: 345 }}>
+                            <Col md="4" key={elm._id}>
+                                <Card style={{height: 450}} sx={{ maxWidth: 345, }}>
 
                                     <CardHeader
                                         title={elm.username} />
                                     <CardMedia
                                         component="img"
-                                        height="194"
+                                        height="250"
                                         image={elm.profilePic}
                                         alt="User photo"
                                     />

@@ -22,12 +22,14 @@ const WishPlacesCard = ({ places, refreshPlaces }) => {
 
     return (
         <>
+        <h1 style={{marginTop:"70px"}}> Aquí están tus escuelas favortias!</h1>
+        
             {places.map(place => {
                 return (
 
                     <div key={place._id}>
 
-                        <h1> Aquí están tus escuelas favortias!</h1>
+                        
 
 
                         <Card className="bg-dark text-white place-card" >
