@@ -21,6 +21,9 @@ body a {
 
 .logo{
   width: 100px;
-
   margin: -2px 0px
+}
+
+.link:hover{
+  color: #b13636 !important
 }
