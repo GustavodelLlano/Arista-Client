@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { Badge, Button, ListGroup } from "react-bootstrap"
+import { Badge, Button, ListGroup, Spinner } from "react-bootstrap"
 import { AuthContext } from "../../context/auth.context"
 import userService from "../../services/user.service"
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
@@ -74,7 +74,8 @@ const WishPitchesList = ({ userProfile, refreshFavPitches }) => {
                 </ListGroup>
             </>
             :
-            <>Loading...</>
+            
+            <Spinner animation="border" />
 
 
     )

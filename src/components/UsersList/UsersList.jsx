@@ -2,7 +2,7 @@ import "./UsersList.css"
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import IconButton from '@mui/material/IconButton';
 import { useContext } from "react"
-import { Button, Col, Row } from "react-bootstrap"
+import { Spinner, Col, Row } from "react-bootstrap"
 import { AuthContext } from "../../context/auth.context"
 import userService from "../../services/user.service"
 import { useNavigate } from "react-router-dom"
@@ -83,10 +83,9 @@ const UsersList = ({ usersInfo }) => {
 
             </>
 
-
-
             :
-            <>Loading...</>
+
+            <Spinner animation="border" />
     )
 
 

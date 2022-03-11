@@ -1,7 +1,7 @@
 import DeleteIcon from '@mui/icons-material/Delete'
 import IconButton from '@mui/material/IconButton'
 import { useContext } from "react"
-import { Button, Card, Col, Row } from "react-bootstrap"
+import { Button, Card, Col, Row, Spinner } from "react-bootstrap"
 import { AuthContext } from "../../context/auth.context"
 import userService from "../../services/user.service"
 import { useNavigate } from "react-router-dom"
@@ -10,7 +10,6 @@ import { CardActions, CardContent, CardHeader, CardMedia, Typography } from '@mu
 
 
 const FriendsList = ({ userProfile, refreshProfileInformation }) => {
-    console.log(userProfile)
 
     const { isLoggedIn } = useContext(AuthContext)
     const navigate = useNavigate()
@@ -59,20 +58,14 @@ const FriendsList = ({ userProfile, refreshProfileInformation }) => {
 
                             </Col>
 
-
-
                         )
                     })}
                 </Row>
 
             </>
-
-
-
             :
 
-
-            <>Loading...</>
+            <Spinner animation="border" />
     )
 
 }

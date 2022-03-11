@@ -1,4 +1,9 @@
 import React from 'react';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import GoogleIcon from '@mui/icons-material/Google';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import PhoneAndroidRoundedIcon from '@mui/icons-material/PhoneAndroidRounded';
@@ -6,6 +11,11 @@ import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import LandscapeRoundedIcon from '@mui/icons-material/LandscapeRounded';
 import { MDBFooter, MDBIcon } from 'mdb-react-ui-kit';
 import "./Footer.css"
+import GitHub from '@mui/icons-material/GitHub';
+import Facebook from '@mui/icons-material/Facebook';
+import Google from '@mui/icons-material/Google';
+import Twitter from '@mui/icons-material/Twitter';
+import Instagram from '@mui/icons-material/Instagram';
 
 const Footer = () => {
   return (
@@ -17,22 +27,19 @@ const Footer = () => {
 
         <div>
           <a href='' className='me-4 text-reset'>
-            <i className='fab fa-facebook-f'></i>
+            <Instagram />
           </a>
           <a href='' className='me-4 text-reset'>
-            <i className='fab fa-twitter'></i>
+            <Twitter />
           </a>
           <a href='' className='me-4 text-reset'>
-            <i className='fab fa-google'></i>
+            <Facebook />
           </a>
           <a href='' className='me-4 text-reset'>
-            <i className='fab fa-instagram'></i>
+            <Google/>
           </a>
           <a href='' className='me-4 text-reset'>
-            <i className='fab fa-linkedin'></i>
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <i className='fab fa-github'></i>
+            <GitHub/>
           </a>
         </div>
 
