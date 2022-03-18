@@ -15,4 +15,4 @@ npm run dev
 ```
 
 ## About
-This is the final project for the Web Dev Bootcamp at Ironhack Madrid. Developed by @Juds94 and me using MERN Stack for two weeks.
+This is the final project for the Web Dev Bootcamp at Ironhack Madrid. Developed by [Judit Angulo](https://github.com/Juds94) and me using MERN Stack for two weeks.
